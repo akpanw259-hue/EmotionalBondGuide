@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Your Ex Back – Discover the Method That's Reconnecting Couples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:       #C0392B;
+      --red-light: #E74C3C;
+      --red-dark:  #96281B;
+      --cream:     #FDF6F0;
+      --warm-gray: #F5EDE6;
+      --charcoal:  #2C2C2C;
+      --mid-gray:  #6B6B6B;
+      --light-gray:#E8E0D8;
+      --white:     #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--white);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── Utility ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--red-light), var(--red-dark));
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 44px;
+      border-radius: 50px;
+      box-shadow: 0 8px 28px rgba(192,57,43,.40);
+      transition: transform .2s, box-shadow .2s;
+      cursor: pointer;
+      border: none;
+    }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(192,57,43,.55); }
+    .cta-btn:active { transform: translateY(0); }
+
+    /* pulse animation on CTA */
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 28px rgba(192,57,43,.40); }
+      50%       { box-shadow: 0 8px 42px rgba(192,57,43,.70); }
+    }
+    .cta-btn.pulse { animation: pulse 2.4s ease-in-out infinite; }
+
+    /* ── Top Bar ── */
+    .topbar {
+      background: var(--charcoal);
+      color: #fff;
+      text-align: center;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      padding: 10px 16px;
+    }
+    .topbar span { color: #F5A623; font-weight: 700; }
+
+    /* ────────────────────────────────────────────
+       SECTION 1 — HERO
+    ──────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(160deg, #fff 0%, var(--cream) 60%, var(--warm-gray) 100%);
+      padding: 70px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(192,57,43,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 1.5px solid var(--red-light);
+      border-radius: 50px;
+      padding: 5px 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      font-weight: 900;
+      line-height: 1.22;
+      color: var(--charcoal);
+      max-width: 720px;
+      margin: 0 auto 22px;
+    }
+    .hero h1 em { color: var(--red); font-style: italic; }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--mid-gray);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-img-wrap {
+      max-width: 560px;
+      margin: 0 auto 40px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.14);
+    }
+    .hero-img-wrap img {
+      width: 100%; display: block;
+      transition: transform .6s ease;
+    }
+    .hero-img-wrap:hover img { transform: scale(1.03); }
+
+    .hero-disclaimer {
+      font-size: .76rem;
+      color: #aaa;
+      margin-top: 14px;
+    }
+
+    /* ────────────────────────────────────────────
+       SECTION 2 — PROBLEM
+    ──────────────────────────────────────────── */
+    .problem {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 80px 24px;
+    }
+    .problem .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .problem h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 22px;
+    }
+    .problem h2 span { color: #E87575; }
+    .problem p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #C8C0BA;
+      margin-bottom: 16px;
+    }
+    .emotion-list { list-style: none; margin-top: 22px; }
+    .emotion-list li {
+      font-size: .95rem;
+      color: #E0D8D0;
+      padding: 7px 0 7px 26px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .emotion-list li::before {
+      content: '—';
+      position: absolute; left: 0;
+      color: var(--red-light);
+    }
+
+    .problem-img {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 50px rgba(0,0,0,.40);
+    }
+    .problem-img img { width: 100%; display: block; }
+
+    /* ────────────────────────────────────────────
+       SECTION 3 — DISCOVERY
+    ──────────────────────────────────────────── */
+    .discovery {
+      background: var(--cream);
+      padding: 90px 24px;
+      text-align: center;
+    }
+    .section-label {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+    .discovery h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.25;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+    .discovery h2 em { color: var(--red); font-style: italic; }
+    .discovery p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--mid-gray);
+      max-width: 640px;
+      margin: 0 auto 18px;
+    }
+    .discovery-img {
+      max-width: 560px;
+      margin: 40px auto 0;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 55px rgba(0,0,0,.12);
+    }
+    .discovery-img img { width: 100%; display: block; }
+
+    /* highlight box */
+    .highlight-box {
+      background: #fff;
+      border-left: 4px solid var(--red);
+      border-radius: 10px;
+      padding: 20px 26px;
+      max-width: 640px;
+      margin: 34px auto;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      box-shadow: 0 4px 18px rgba(0,0,0,.07);
+    }
+    .highlight-box strong { color: var(--red); }
+
+    /* ────────────────────────────────────────────
+       SECTION 4 — BENEFITS
+    ──────────────────────────────────────────── */
+    .benefits {
+      background: var(--white);
+      padding: 90px 24px;
+    }
+    .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 48px; }
+
+    .benefit-card {
+      background: var(--cream);
+      border: 1px solid var(--light-gray);
+      border-radius: 14px;
+      padding: 28px 26px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .benefit-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.09); transform: translateY(-2px); }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red-light), var(--red-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .benefit-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .benefit-card p { font-size: .9rem; color: var(--mid-gray); line-height: 1.6; }
+
+    /* ────────────────────────────────────────────
+       SECTION 5 — MID CTA
+    ──────────────────────────────────────────── */
+    .mid-cta {
+      background: linear-gradient(135deg, #2C1010 0%, var(--red-dark) 60%, #8B1A1A 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .mid-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .mid-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: #fff;
+      max-width: 640px;
+      margin: 0 auto 20px;
+      line-height: 1.25;
+      position: relative;
+    }
+    .mid-cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.75);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      position: relative;
+    }
+    .mid-cta .cta-btn { background: #fff; color: var(--red-dark); box-shadow: 0 8px 28px rgba(0,0,0,.30); position: relative; }
+    .mid-cta .cta-btn:hover { box-shadow: 0 14px 40px rgba(0,0,0,.45); }
+
+    /* ────────────────────────────────────────────
+       SECTION 6 — TESTIMONIALS
+    ──────────────────────────────────────────── */
+    .testimonials {
+      background: var(--warm-gray);
+      padding: 90px 24px;
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .testi-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 26px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.07);
+      text-align: left;
+      position: relative;
+    }
+    .testi-card::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--red-light);
+      opacity: .25;
+      position: absolute;
+      top: -10px; left: 18px;
+      line-height: 1;
+    }
+    .testi-card p {
+      font-size: .95rem;
+      line-height: 1.75;
+      color: var(--charcoal);
+      margin-bottom: 18px;
+    }
+    .testi-author { font-size: .82rem; font-weight: 700; color: var(--red); letter-spacing: .06em; }
+    .testi-stars { color: #F5A623; font-size: 1rem; margin-bottom: 12px; }
+
+    /* ────────────────────────────────────────────
+       SECTION 7 — FINAL CTA
+    ──────────────────────────────────────────── */
+    .final-cta {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.2;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+    .final-cta h2 em { color: var(--red); font-style: italic; }
+    .final-cta p {
+      font-size: 1.05rem;
+      color: var(--mid-gray);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+    .urgency-note {
+      display: inline-block;
+      font-size: .82rem;
+      color: var(--red);
+      font-weight: 700;
+      letter-spacing: .05em;
+      margin-top: 18px;
+      background: rgba(192,57,43,.07);
+      padding: 7px 20px;
+      border-radius: 50px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--charcoal);
+      color: #999;
+      text-align: center;
+      font-size: .78rem;
+      padding: 28px 24px;
+      line-height: 1.7;
+    }
+    footer a { color: #bbb; text-decoration: underline; }
+
+    /* ── Divider ── */
+    .wave-divider { display: block; width: 100%; overflow: hidden; line-height: 0; }
+    .wave-divider svg { display: block; }
+
+    /* ── Fade-in on scroll ── */
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ──────────────────────────────
+       RESPONSIVE
+    ─────────────────────────────── */
+    @media (max-width: 768px) {
+      .problem .inner { grid-template-columns: 1fr; gap: 36px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .cta-btn { font-size: .95rem; padding: 16px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>⚠ Limited Time:</span> &nbsp;Free access to the full relationship guide – available today only
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">For anyone who's been through a breakup</span>
+
+    <h1>Still Thinking About Your Ex? Here's a <em>Surprising Way</em> Many People Are Reconnecting With Their Ex Again</h1>
+
+    <p class="hero-sub">
+      Thousands of people just like you have used a little-known psychological method to reopen the door — even after months of silence, harsh words, or a "final" goodbye.
+    </p>
+
+    <!-- HERO IMAGE: Replace the src URL below with your own image -->
+    <div class="hero-img-wrap fade-in">
+      <img
+        src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=900&q=80"
+        alt="Person thoughtfully looking at their phone, missing someone"
+        loading="eager"
+      />
+    </div>
+
+    <a href="https://cutt.ly/The-Ex-Factor--Guide-Official-Website-Get-Now" class="cta-btn pulse" target="_blank" rel="noopener">Discover the Method Here &nbsp;→</a>
+    <p class="hero-disclaimer">Free to read · No spam · Evidence-based approach</p>
+  </div>
+</section>
+
+<!-- Wave -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" height="50" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#2C2C2C"/>
+  </svg>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — RELATABLE PROBLEM
+══════════════════════════════════════ -->
+<section class="problem">
+  <div class="container">
+    <div class="inner">
+      <div class="fade-in">
+        <h2>Breakups leave a wound that <span>doesn't just fade away</span></h2>
+        <p>
+          If you've been through a painful breakup, you already know that moving on is never as simple as people say. The memories replay on loop. You pick up your phone to text them — then put it down. You wonder what they're doing, whether they miss you too, whether there's any way back.
+        </p>
+        <p>
+          This isn't weakness. It's human. And you are far from alone.
+        </p>
+        <ul class="emotion-list">
+          <li>Waking up at 3am replaying what went wrong</li>
+          <li>Scrolling their social media even when it hurts</li>
+          <li>Regretting things you said — or never said</li>
+          <li>Wishing you could have just one more real conversation</li>
+          <li>Wondering if they've already moved on for good</li>
+        </ul>
+      </div>
+
+      <!-- PROBLEM IMAGE: Replace the src URL below with your own image -->
+      <div class="problem-img fade-in">
+        <img
+          src="https://images.unsplash.com/photo-1499651681375-8afc5a4db253?w=700&q=80"
+          alt="Couple separated, looking unhappy and distant"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" height="50" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#FDF6F0"/>
+  </svg>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — DISCOVERY
+══════════════════════════════════════ -->
+<section class="discovery">
+  <div class="container">
+    <p class="section-label">What relationship experts discovered</p>
+    <h2>There Are Specific <em>Psychological Triggers</em> That Can Reignite Attraction — Even After a Breakup</h2>
+
+    <p>
+      Relationship researchers have spent years studying why some couples successfully reconnect after a breakup — and others don't. What they found wasn't about luck, looks, or grand romantic gestures.
+    </p>
+
+    <div class="highlight-box fade-in">
+      <strong>The difference came down to a specific sequence of actions.</strong> Most people make critical mistakes in the days and weeks after a breakup that silently push their ex further away — without even realizing it. But when you understand the underlying psychology, you can completely change the dynamic.
+    </div>
+
+    <p>
+      This method works by tapping into how the human brain processes loss, emotional memory, and attraction — and it doesn't require begging, manipulating, or playing games. It's about reconnecting on a genuinely deeper level.
+    </p>
+
+    <!-- DISCOVERY IMAGE: Replace the src URL below with your own image -->
+    <div class="discovery-img fade-in">
+      <img
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80"
+        alt="Happy couple reconnecting and embracing"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — BENEFITS
+══════════════════════════════════════ -->
+<section class="benefits">
+  <div class="container">
+    <p class="section-label" style="text-align:center;">What you'll learn inside</p>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.7rem,3.5vw,2.3rem); text-align:center; font-weight:900; max-width:580px; margin:0 auto;">
+      The Complete Roadmap to Getting a Second Chance
+    </h2>
+
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">💔</div>
+        <div>
+          <h3>Why Your Ex Really Pulled Away</h3>
+          <p>Discover the true emotional reasons behind the breakup — often different from what they told you — and what it means for your chances.</p>
+        </div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">📱</div>
+        <div>
+          <h3>The Texting Mistakes Most People Make</h3>
+          <p>Learn the exact messages that push an ex further away — and what to write instead to spark genuine curiosity and re-engagement.</p>
+        </div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🧠</div>
+        <div>
+          <h3>Psychological Triggers That Rebuild Attraction</h3>
+          <p>Understand the science of how attraction works after a breakup — and how specific actions flip a mental switch in your ex's mind.</p>
+        </div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🗺️</div>
+        <div>
+          <h3>A Step-by-Step Method to Reconnect</h3>
+          <p>A clear, proven sequence you can follow — from the first contact to rebuilding a stronger, healthier relationship than before.</p>
+        </div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🚫</div>
+        <div>
+          <h3>What NOT to Do (Most People Get This Wrong)</h3>
+          <p>Avoid the desperate actions that seem logical but permanently close the door — and what to do in those critical first 48 hours instead.</p>
+        </div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">✨</div>
+        <div>
+          <h3>How to Become Genuinely Irresistible Again</h3>
+          <p>Rebuild your confidence and sense of self in a way that naturally makes your ex question their decision — without chasing or begging.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — MID CTA
+══════════════════════════════════════ -->
+<section class="mid-cta">
+  <div class="container">
+    <h2>Ready to Stop Wondering "What If" and Finally Take Action?</h2>
+    <p>
+      The full relationship guide walks you through every step — in plain language, without fluff. Thousands of people have already used it to restart conversations they thought were over for good.
+    </p>
+    <a href="https://cutt.ly/The-Ex-Factor--Guide-Official-Website-Get-Now" class="cta-btn" target="_blank" rel="noopener">See the Relationship Guide &nbsp;→</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 6 — TESTIMONIALS
+══════════════════════════════════════ -->
+<section class="testimonials">
+  <div class="container">
+    <h2>Real Stories From People Who Were Exactly Where You Are Now</h2>
+
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I never thought we would talk again after what happened. But after following the steps in this guide, she texted me first — completely out of nowhere. This completely changed things."</p>
+        <span class="testi-author">— Michael T., 34</span>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I was making every mistake in the book without knowing it. The part about texting alone was worth everything. We've been back together for three months now and things are better than ever."</p>
+        <span class="testi-author">— Sarah K., 28</span>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I was skeptical. But I was desperate enough to try anything. Six weeks later he told me breaking up was the biggest mistake of his life. We're taking it slow, but we're together again."</p>
+        <span class="testi-author">— Jamie L., 31</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 7 — FINAL CTA
+══════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <p class="section-label">Don't leave it to chance</p>
+    <h2>This Could Be the <em>Turning Point</em> You've Been Waiting For</h2>
+    <p>
+      Every day that passes without taking action is a day your ex's emotional connection to you fades a little more. The window doesn't stay open forever — but right now, it's still there.
+    </p>
+
+    <a href="https://cutt.ly/The-Ex-Factor--Guide-Official-Website-Get-Now" class="cta-btn pulse" target="_blank" rel="noopener">Discover the Full Method Now &nbsp;→</a>
+
+    <br />
+    <span class="urgency-note">⏳ This free guide may not be available much longer</span>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2025 · This page contains affiliate links. We may receive a commission if you purchase through our link, at no extra cost to you.</p>
+  <p style="margin-top:8px;"><a href="#">Privacy Policy</a> · <a href="#">Disclaimer</a> · <a href="#">Contact</a></p>
+  <p style="margin-top:10px; font-size:.72rem; color:#666;">
+    Results mentioned are not typical. Individual outcomes will vary. This content is for informational purposes only and does not constitute professional relationship advice.
+  </p>
+</footer>
+
+<!-- ── SCROLL FADE-IN SCRIPT ── -->
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
